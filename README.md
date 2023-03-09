@@ -1,5 +1,7 @@
 AnimaView a minimalist package that allows you to animate text on scroll.
 
+<img src="https://github.com/sx-motive/anima-view/blob/master/src/anima-preview.gif" alt="anima view" border="0" />
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/package/anima-view) to install AnimaView.
