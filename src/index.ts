@@ -51,6 +51,28 @@ const text: string = `
   <span data-anima>Thanks ChatGPT for this awesome article 😽</span>
 </div>
 </section>
+<section class="with-options" id="animate-wrap">
+<div class="container">
+  <div class="box">
+    <h3 id="random">Example with the 'Random' animation</h3>
+  </div>
+  <div class="box">
+    <h3 id="left">Example with the 'Left' animation</h3>
+  </div>
+  <div class="box">
+    <h3 id="top">Example with the 'Top' animation</h3>
+  </div>
+  <div class="box">
+    <h3 id="right">Example with the 'Right' animation</h3>
+  </div>
+  <div class="box">
+    <h3 id="bottom">Example with the 'Bottom' animation</h3>
+  </div>
+  <div class="box own">
+  <h3>Own animations coming soon 😼</h3>
+</div>
+</div>
+</section>
 <footer>
 <div class="container">
   <a href="https://www.npmjs.com/package/anima-view" data-anima
@@ -158,12 +180,37 @@ class AnimaView {
   };
 }
 
-const el: HTMLElement | null = document.getElementById('anima-container');
+const el = document.getElementById('anima-container') as HTMLElement;
 
 window.onload = () => {
-  el!.innerHTML = text;
+  el.innerHTML = text;
   const animaView = new AnimaView(document.querySelectorAll('[data-anima]'));
+
+  const animaViewRandom = new AnimaView(
+    document.getElementById('random'),
+    'random'
+  );
+
+  const animaViewLeft = new AnimaView(document.getElementById('left'), 'left');
+
+  const animaViewRight = new AnimaView(
+    document.getElementById('right'),
+    'right'
+  );
+
+  const animaViewTop = new AnimaView(document.getElementById('top'), 'top');
+
+  const animaViewBottom = new AnimaView(
+    document.getElementById('bottom'),
+    'bottom'
+  );
+
   animaView.init();
+  animaViewRandom.init();
+  animaViewLeft.init();
+  animaViewRight.init();
+  animaViewTop.init();
+  animaViewBottom.init();
 };
 
 export default AnimaView;
