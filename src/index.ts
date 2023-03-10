@@ -142,11 +142,8 @@ class AnimaView {
     }
   };
 
-  init = () => {
-    const pattern: RegExp = /(?<!(<\/?[^>]*|&[^;]*))([^\s<]+)/g;
-    const defaultPattern: string = `$1<span class="word"><span>$2</span></span>`;
-
-    let observer = new IntersectionObserver((entries) => {
+  getObserver = () =>
+    new IntersectionObserver((entries) => {
       entries.forEach((el) => {
         const intersecting = el.isIntersecting;
         intersecting
@@ -154,6 +151,12 @@ class AnimaView {
           : el.target.classList.remove('show');
       });
     });
+
+  init = () => {
+    const pattern: RegExp = /(?<!(<\/?[^>]*|&[^;]*))([^\s<]+)/g;
+    const defaultPattern: string = `$1<span class="word"><span>$2</span></span>`;
+
+    let observer = this.getObserver();
 
     if (this.els === null) {
       console.log('No elements passed');
@@ -180,37 +183,15 @@ class AnimaView {
   };
 }
 
-const el = document.getElementById('anima-container') as HTMLElement;
-
 window.onload = () => {
-  el.innerHTML = text;
-  const animaView = new AnimaView(document.querySelectorAll('[data-anima]'));
+  const container = document.getElementById('anima-container') as HTMLElement;
+  container.innerHTML = text;
 
-  const animaViewRandom = new AnimaView(
-    document.getElementById('random'),
+  const animaView = new AnimaView(
+    document.querySelectorAll('[data-anima]'),
     'random'
   );
-
-  const animaViewLeft = new AnimaView(document.getElementById('left'), 'left');
-
-  const animaViewRight = new AnimaView(
-    document.getElementById('right'),
-    'right'
-  );
-
-  const animaViewTop = new AnimaView(document.getElementById('top'), 'top');
-
-  const animaViewBottom = new AnimaView(
-    document.getElementById('bottom'),
-    'bottom'
-  );
-
   animaView.init();
-  animaViewRandom.init();
-  animaViewLeft.init();
-  animaViewRight.init();
-  animaViewTop.init();
-  animaViewBottom.init();
 };
 
 export default AnimaView;
