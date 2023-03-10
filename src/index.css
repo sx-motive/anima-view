@@ -67,7 +67,6 @@ a.tags:hover {
 .word span {
   display: block;
   transition: all 1s cubic-bezier(0.28, 0.81, 0.43, 0.97);
-  transform-origin: top right;
 }
 .word.show span {
   transform: translateY(0) skewY(0) !important;
