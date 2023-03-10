@@ -43,4 +43,10 @@ anima.init();
 
 ## Options
 
-Coming soon 😊
+You can use the second parameter as the type of animation. There are currently 5 animation types supported
+
+```javascript
+['left', 'right', 'top', 'bottom', 'random'].
+```
+
+The second parameter is taken as a string. If no parametre has been passed, the default animation type is 'bottom'.
