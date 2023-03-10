@@ -78,6 +78,15 @@ class AnimaView {
     const pattern = /(?<!(<\/?[^>]*|&[^;]*))([^\s<]+)/g;
     const domPattern = '$1<span class="word"><span>$2</span></span>';
 
+    let observer = new IntersectionObserver((entries) => {
+      entries.forEach((el) => {
+        const intersecting = el.isIntersecting;
+        intersecting
+          ? el.target.classList.add('show')
+          : el.target.classList.remove('show');
+      });
+    });
+
     if (this.els === null) {
       console.log('No elements passed');
       return;
@@ -86,20 +95,13 @@ class AnimaView {
     if (this.els instanceof NodeList || this.els instanceof HTMLCollection) {
       Array.prototype.map.call(this.els, (el) => {
         el.innerHTML = el.innerHTML.replace(pattern, domPattern);
-        let observer = new IntersectionObserver((entries) => {
-          entries.forEach((el) => {
-            const intersecting = el.isIntersecting;
-            intersecting
-              ? el.target.classList.add('show')
-              : el.target.classList.remove('show');
-          });
-        });
         [...el.children].map((el) => observer.observe(el));
       });
     }
 
     if (this.els instanceof HTMLElement || this.els instanceof Element) {
       this.els.innerHTML = this.els.innerHTML.replace(pattern, domPattern);
+      Array.from(this.els.children).map((el) => observer.observe(el));
     }
   };
 }
