@@ -1,3 +1,5 @@
+import imgAnima from './animaview.gif';
+
 const text: string = `
   <section>
    <div class="container">
@@ -20,7 +22,7 @@ const text: string = `
     create a more engaging user experience and increase the chances that
     visitors will stay on your site longer.
   </p>
-  <img src="./animaview.gif" alt="anima view" />
+  <img src="${imgAnima}" alt="anima view" />
   <p data-anima>
     Enhancing User Experience: Animations can also be used to enhance the
     user experience on a website. For example, animations can be used to
