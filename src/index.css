@@ -5,7 +5,7 @@ html {
   font-size: 18px;
 }
 body {
-  background-color: #f1f1f1;
+  background-color: #e2e2e2;
   color: #000;
   font-size: 1rem;
   font-family: Apercu Pro;
@@ -91,7 +91,13 @@ a.tags:hover {
 .word span {
   display: block;
   transition: all 1s cubic-bezier(0.28, 0.81, 0.43, 0.97);
+  transition-delay: 0.145s;
 }
 .word.show span {
   transform: translateY(0) skewY(0) !important;
+}
+
+.with-options .word span {
+  transition: all 1.5s cubic-bezier(0.28, 0.81, 0.43, 0.97);
+  transition-delay: 0.2s;
 }

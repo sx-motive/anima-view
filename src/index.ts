@@ -66,7 +66,7 @@ const text: string = `
     <h3 id="right">Example with the 'Right' animation</h3>
   </div>
   <div class="box">
-    <h3 id="bottom">Example with the 'Bottom' animation</h3>
+    <h3 id="bottom" data-anima>Example with the 'Bottom' animation</h3>
   </div>
   <div class="box own">
   <h3>Own animations coming soon 😼</h3>
@@ -187,11 +187,23 @@ window.onload = () => {
   const container = document.getElementById('anima-container') as HTMLElement;
   container.innerHTML = text;
 
-  const animaView = new AnimaView(
-    document.querySelectorAll('[data-anima]'),
+  const animaView = new AnimaView(document.querySelectorAll('[data-anima]'));
+  animaView.init();
+
+  const animatop = new AnimaView(document.getElementById('top'), 'top');
+  animatop.init();
+
+  const animaleft = new AnimaView(document.getElementById('left'), 'left');
+  animaleft.init();
+
+  const animaright = new AnimaView(document.getElementById('right'), 'right');
+  animaright.init();
+
+  const animarandom = new AnimaView(
+    document.getElementById('random'),
     'random'
   );
-  animaView.init();
+  animarandom.init();
 };
 
 export default AnimaView;
