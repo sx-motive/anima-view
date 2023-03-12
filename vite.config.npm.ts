@@ -10,11 +10,12 @@ export default defineConfig({
     rollupOptions: {
       preserveEntrySignatures: 'strict',
       input: {
-        index: resolve(__dirname, 'src/animaview/index.css'),
+        index: resolve(__dirname, 'src/animaview/index.ts'),
       },
       output: {
-        entryFileNames: 'animaview.css',
-        assetFileNames: 'index.css',
+        format: 'es',
+        entryFileNames: 'animaview.min.js',
+        // assetFileNames: 'index.css',
       },
     },
   },
@@ -32,10 +33,10 @@ export default defineConfig({
           dest: normalizePath(resolve(__dirname, 'npm')),
           rename: 'package.json',
         },
-        {
-          src: normalizePath(resolve(__dirname, './src/animaview/index.ts')),
-          dest: normalizePath(resolve(__dirname, 'npm')),
-        },
+        // {
+        //   src: normalizePath(resolve(__dirname, './src/animaview/index.ts')),
+        //   dest: normalizePath(resolve(__dirname, 'npm')),
+        // },
       ],
     }),
   ],
