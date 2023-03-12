@@ -12,13 +12,30 @@ npm install anima-view
 
 ## Usage
 
-Styles for animation can be changed depending on your preferences, the standard styles can be taken below
-
 html
 
 ```html
 <!-- use elements with id, class, or data attribute -->
 <p data-anima>Example text</p>
+```
+
+css
+
+Styles for animation can be changed depending on your preferences, the standard styles can be taken below
+
+```css
+.word {
+  display: inline-block;
+  overflow: hidden;
+}
+.word span {
+  display: block;
+  transition: all 1s cubic-bezier(0.28, 0.81, 0.43, 0.97);
+  transition-delay: 0.145s;
+}
+.word.show span {
+  transform: translateY(0) skewY(0) !important;
+}
 ```
 
 js
@@ -48,17 +65,17 @@ The second parameter is taken as a string. If no parametre has been passed, the 
 import { useEffect } from 'react';
 import AnimaView from 'anima-view';
 
-export default Component () {
+export default function Component() {
   useEffect(() => {
-   const elements = document.querySelectorAll('[data-anima]');
-   const anima = new AnimaView(elements, 'random');
-   anima.init();
-  })
-  return <p data-anima>Example text</p>
+    const elements = document.querySelectorAll('[data-anima]');
+    const anima = new AnimaView(elements, 'random');
+    anima.init();
+  });
+  return <p data-anima>Example text</p>;
 }
 ```
 
-## GitHub
+## Rate
 
 If you like the project or would like to improve it, please rate the project on the githab, this will help motivate me to continue working on it.
 
