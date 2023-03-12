@@ -1,0 +1,12 @@
+{
+  "name": "anima-view",
+  "version": "1.0.9",
+  "description": "Simple text animation on view.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["animation", "animation on view", "text animation"],
+  "author": "Denis Kunitsyn <sx.motive@gmail.com> (https://t.me/sxmotive)",
+  "license": "ISC"
+}

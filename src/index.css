@@ -10,6 +10,7 @@ body {
   font-size: 1rem;
   font-family: Apercu Pro;
   font-weight: 400;
+  margin: 0;
 }
 section {
   padding: 80px 0 0 0;
@@ -83,18 +84,6 @@ a.tags {
 }
 a.tags:hover {
   border: 1px solid #000;
-}
-.word {
-  display: inline-block;
-  overflow: hidden;
-}
-.word span {
-  display: block;
-  transition: all 1s cubic-bezier(0.28, 0.81, 0.43, 0.97);
-  transition-delay: 0.145s;
-}
-.word.show span {
-  transform: translateY(0) skewY(0) !important;
 }
 
 .with-options .word span {

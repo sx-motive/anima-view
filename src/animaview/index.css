@@ -1,0 +1,12 @@
+.word {
+  display: inline-block;
+  overflow: hidden;
+}
+.word span {
+  display: block;
+  transition: all 1s cubic-bezier(0.28, 0.81, 0.43, 0.97);
+  transition-delay: 0.145s;
+}
+.word.show span {
+  transform: translateY(0) skewY(0) !important;
+}
