@@ -12,14 +12,14 @@ npm install anima-view
 
 ## Usage
 
-html
+##### html
 
 ```html
 <!-- use elements with id, class, or data attribute -->
 <p data-anima>Example text</p>
 ```
 
-css
+##### css
 
 Styles for animation can be changed depending on your preferences, the standard styles can be taken below
 
@@ -38,16 +38,20 @@ Styles for animation can be changed depending on your preferences, the standard 
 }
 ```
 
-js
+download [animaview.min.css](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.css)
+
+##### js
 
 ```javascript
 import AnimaView from 'anima-view';
 // can be any dom element
 const elements = document.querySelectorAll('[data-anima]');
 // without options default is bottom
-const anima = new AnimaView(elements, options);
+const anima = new AnimaView(elements, 'options');
 anima.init();
 ```
+
+download [animaview.min.js](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.js)
 
 ## Options
 
@@ -75,8 +79,8 @@ export default function Component() {
 }
 ```
 
-## Rate
+## Evaluation and suggestions
 
-If you like the project or would like to improve it, please rate the project on the githab, this will help motivate me to continue working on it.
+If you like the project or would like to improve it, please rate on githab, this will motivate me to continue working on it, big thanks! ❤️
 
 [GitHub](https://github.com/sx-motive/anima-view) | [Website](https://animaview.netlify.app/)

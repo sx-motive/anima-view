@@ -11,11 +11,12 @@ export default defineConfig({
       preserveEntrySignatures: 'strict',
       input: {
         index: resolve(__dirname, 'src/animaview/index.ts'),
+        css: resolve(__dirname, 'src/animaview/index.css'),
       },
       output: {
         format: 'es',
         entryFileNames: 'animaview.min.js',
-        // assetFileNames: 'index.css',
+        assetFileNames: 'animaview.min.css',
       },
     },
   },
