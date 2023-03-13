@@ -1,5 +1,6 @@
 import AnimaView from './animaview';
 import imgAnima from './animaview.gif';
+import './animaview/index.css';
 
 const text: string = `
   <section>
