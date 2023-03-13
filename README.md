@@ -2,8 +2,6 @@ AnimaView a minimalist package that allows you to animate text on scroll.
 
 <img src="https://github.com/sx-motive/anima-view/blob/master/src/anima-preview.gif" alt="anima view" border="0" />
 
-<br>
-
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/package/anima-view) to install AnimaView.
@@ -13,8 +11,6 @@ npm install anima-view
 ```
 
 or download files [animaview.min.js](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.js) | [animaview.min.css](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.css)
-
-<br>
 
 ## Usage
 
@@ -26,8 +22,6 @@ or download files [animaview.min.js](https://cdn.jsdelivr.net/npm/anima-view/ani
 ```
 
 ### css
-
-<sub><sub>Styles for animation can be changed depending on your preferences, the standard styles can be taken below</sub></sub>
 
 ```css
 .word {
@@ -55,8 +49,6 @@ const anima = new AnimaView(elements, 'options');
 anima.init();
 ```
 
-<br>
-
 ## Options
 
 You can use the second parameter as the type of animation. There are currently 5 animation types supported
@@ -66,8 +58,6 @@ You can use the second parameter as the type of animation. There are currently 5
 ```
 
 The second parameter is taken as a string. If no parametre has been passed, the default animation type is 'bottom'.
-
-<br>
 
 ## Example using with React
 
@@ -84,8 +74,6 @@ export default function Component() {
   return <p data-anima>Example text</p>;
 }
 ```
-
-<br>
 
 ## Evaluation and suggestions
 
