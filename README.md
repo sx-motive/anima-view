@@ -10,16 +10,18 @@ Use the package manager [npm](https://www.npmjs.com/package/anima-view) to insta
 npm install anima-view
 ```
 
+or download files [animaview.min.js](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.js) | [animaview.min.css](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.css)
+
 ## Usage
 
-##### html
+### html
 
 ```html
 <!-- use elements with id, class, or data attribute -->
 <p data-anima>Example text</p>
 ```
 
-##### css
+### css
 
 Styles for animation can be changed depending on your preferences, the standard styles can be taken below
 
@@ -38,9 +40,7 @@ Styles for animation can be changed depending on your preferences, the standard 
 }
 ```
 
-download [animaview.min.css](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.css)
-
-##### js
+### js
 
 ```javascript
 import AnimaView from 'anima-view';
@@ -50,8 +50,6 @@ const elements = document.querySelectorAll('[data-anima]');
 const anima = new AnimaView(elements, 'options');
 anima.init();
 ```
-
-download [animaview.min.js](https://cdn.jsdelivr.net/npm/anima-view/animaview.min.js)
 
 ## Options
 
